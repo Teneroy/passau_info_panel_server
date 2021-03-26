@@ -16,9 +16,9 @@ router.get('/weather', async (req, res) => {
             res.send({
                 "temperature": data.main.temp,
                 "humidity": data.main.humidity,
-                "state": data.weather[data.weather.length - 1].main,
                 "feels_like": data.main.feels_like,
-                "wind": data.wind.speed
+                "wind": data.wind.speed,
+                "icon": data.weather[data.weather.length - 1].icon
             });
         })
         .catch(error => {
