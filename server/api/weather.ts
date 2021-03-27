@@ -14,6 +14,7 @@ router.get('/weather', async (req, res) => {
         .then(response => {
             const data: any = response.data;
             res.send({
+                "city": city,
                 "temperature": data.main.temp,
                 "humidity": data.main.humidity,
                 "feels_like": data.main.feels_like,
